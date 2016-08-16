@@ -327,6 +327,7 @@ public class RecordAndSave extends Activity {
     private void finishActivityWithReport(int reporttype, String report, int report_code) {
         Intent intent = new Intent();
         intent.putExtra(Utils.REPORT, report);
+        intent.putExtra(Utils.REPORT_CODE, report_code);
         if (reporttype == Utils.REPORT_TYPE_CANCELLED) {
             setResult(Activity.RESULT_CANCELED, intent);
         } else if (reporttype == Utils.REPORT__TYPE_DONE) {
