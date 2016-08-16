@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\black_button_background.xml",
+        "source": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\src\\main\\res\\drawable-v21\\black_button_background.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\play_button.xml",
+        "source": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\src\\main\\res\\drawable-v21\\play_button.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\black_button_background.xml",
+        "source": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\src\\main\\res\\drawable-v21\\black_button_background.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\play_button.xml",
+        "source": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\src\\main\\res\\drawable-v21\\play_button.xml"
+    }
+]

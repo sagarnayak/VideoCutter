@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lib</string>
+    <string name="permission_read_storage_rationale">Storage read permission is needed to pick files.</string>
+    <string name="label_select_video">Select Video</string>
+    <string name="permission_title_rationale">Permission needed</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_ok">OK</string>
+    <string name="toast_cannot_retrieve_selected_video">Cannot retrieve selected video</string>
+    <string name="trimming_progress">Trimming your video...</string>
+    <string name="video_saved_at">Video saves at : $%1s</string>
+</resources>

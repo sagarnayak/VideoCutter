@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_progress_color">#6C6D6D</color>
+    <color name="background_video_color">#2f3031</color>
+    <color name="black_translucent">#50000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="line_button">#565758</color>
+    <color name="line_color">#FF15FF00</color>
+    <color name="progress_color">@color/colorPrimary</color>
+    <color name="shadow_color">#FF000000</color>
+    <dimen name="frames_video_height">40dip</dimen>
+    <dimen name="progress_video_line_height">2dp</dimen>
+    <string name="cancel">Cancel</string>
+    <string name="kilobyte">KB</string>
+    <string name="megabyte">MB</string>
+    <string name="save">Save</string>
+    <string name="short_seconds">sec</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

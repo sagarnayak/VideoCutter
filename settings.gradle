@@ -1,0 +1,1 @@
+include ':app', ':lib', ':k4l-video-trimmer'

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\release\\drawable-v23\\abc_control_background_material.xml",
+        "source": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v23\\abc_control_background_material.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\release\\drawable-v23\\abc_control_background_material.xml",
+        "source": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v23\\abc_control_background_material.xml"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "D:\\AS_Projects\\VideoCutter\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "D:\\AS_Projects\\k4l-video-trimmer-develop\\k4l-video-trimmer\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    }
+]

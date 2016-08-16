@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel">Cancelar</string>
+    <string name="kilobyte">KB</string>
+    <string name="megabyte">MB</string>
+    <string name="save">Guardar</string>
+    <string name="short_seconds">sec</string>
+</resources>
