@@ -18,6 +18,7 @@ public class Utils {
     public static final int PERFORM_SEND_PATH = 4;
     public static final String FILE_PATH = "path";
     public static final String REPORT = "report";
+    public static final String MAX_DURATION = "duration";
     public static final int REPORT__TYPE_DONE = 1;
     public static final int REPORT_TYPE_CANCELLED = 2;
 }

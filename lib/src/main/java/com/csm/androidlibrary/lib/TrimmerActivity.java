@@ -18,6 +18,8 @@ public class TrimmerActivity extends AppCompatActivity implements OnTrimVideoLis
     private K4LVideoTrimmer mVideoTrimmer;
     private ProgressDialog mProgressDialog;
 
+    private int intMaxDuration = 10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,10 @@ public class TrimmerActivity extends AppCompatActivity implements OnTrimVideoLis
             path = extraIntent.getStringExtra(Utils.EXTRA_VIDEO_PATH);
         }
 
+        if (extraIntent.getIntExtra(Utils.MAX_DURATION, 0) != 0) {
+            intMaxDuration = extraIntent.getIntExtra(Utils.MAX_DURATION, 0);
+        }
+
         //setting progressbar
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setCancelable(false);
@@ -37,7 +43,7 @@ public class TrimmerActivity extends AppCompatActivity implements OnTrimVideoLis
 
         mVideoTrimmer = ((K4LVideoTrimmer) findViewById(R.id.timeLine));
         if (mVideoTrimmer != null) {
-            mVideoTrimmer.setMaxDuration(10);
+            mVideoTrimmer.setMaxDuration(intMaxDuration);
             mVideoTrimmer.setOnTrimVideoListener(this);
             mVideoTrimmer.setOnK4LVideoListener(this);
             //mVideoTrimmer.setDestinationPath("/storage/emulated/0/DCIM/CameraCustom/");

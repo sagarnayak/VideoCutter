@@ -33,6 +33,8 @@ public class RecordAndSave extends Activity {
     Context context;
     Dialog dialogChooserDialog;
 
+    int intMaxDuration = 0;
+
     RelativeLayout relRecordVideoButton;
     RelativeLayout relGalleryButton;
 
@@ -310,6 +312,9 @@ public class RecordAndSave extends Activity {
         Log.i("log", "the uri to trim is : " + uri);
         Intent intent = new Intent(this, TrimmerActivity.class);
         intent.putExtra(Utils.EXTRA_VIDEO_PATH, FileUtils.getPath(this, uri));
+        if (intMaxDuration != 0) {
+            intent.putExtra(Utils.MAX_DURATION, intMaxDuration);
+        }
         startActivityForResult(intent, Utils.REQUEST_CODE_RECORD_TO_TRIM);
     }
 
@@ -328,5 +333,9 @@ public class RecordAndSave extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         Log.i("log", "destroyed");
+    }
+
+    public void setMaxDuration(int duration) {
+        this.intMaxDuration = duration;
     }
 }
