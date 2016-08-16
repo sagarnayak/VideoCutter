@@ -86,6 +86,8 @@ public class RecordAndSave extends Activity {
         String path = "";
         path = intent.getStringExtra(Utils.FILE_PATH);
 
+        setMaxDuration();
+
         switch (intOperationType) {
             case 1://open chooser dialog
                 displayChooserDialog();
@@ -335,7 +337,12 @@ public class RecordAndSave extends Activity {
         Log.i("log", "destroyed");
     }
 
-    public void setMaxDuration(int duration) {
-        this.intMaxDuration = duration;
+    public void setMaxDuration() {
+        if (getIntent().getIntExtra(Utils.MAX_DURATION, 0) != 0) {
+            Log.i("log", "the max duration is et to : " + getIntent().getIntExtra(Utils.MAX_DURATION, 0));
+            intMaxDuration = getIntent().getIntExtra(Utils.MAX_DURATION, 0);
+        } else {
+            Log.i("log", "the max duration is default and the dafault will be 10 seconds. to vlaue was passed to it.");
+        }
     }
 }
