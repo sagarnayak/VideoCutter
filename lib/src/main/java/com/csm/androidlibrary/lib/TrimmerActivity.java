@@ -69,6 +69,7 @@ public class TrimmerActivity extends AppCompatActivity implements OnTrimVideoLis
         });
         Intent intent = new Intent();
         intent.putExtra(Utils.REPORT, "" + uri);
+        intent.putExtra(Utils.REPORT_CODE, Utils.REPORT_CODE_SUCCESS);
         setResult(Activity.RESULT_OK, intent);
         finish();
     }
@@ -78,7 +79,7 @@ public class TrimmerActivity extends AppCompatActivity implements OnTrimVideoLis
         Log.i("log", "the action is cancelled.");
         mProgressDialog.cancel();
         mVideoTrimmer.destroy();
-        finishWithError("the action is cancelled.");
+        finishWithError("the action is cancelled.", Utils.REPORT_CODE_TRIMMING_CANCELLED);
     }
 
     @Override
@@ -89,7 +90,7 @@ public class TrimmerActivity extends AppCompatActivity implements OnTrimVideoLis
             @Override
             public void run() {
                 Log.i("log", "error occured during trimming the video.");
-                finishWithError("error occured during trimming the video.");
+                finishWithError("error occured during trimming the video.", Utils.REPORT_CODE_ERROR_DURING_TRIMMING_VIDEO);
             }
         });
     }
@@ -104,9 +105,10 @@ public class TrimmerActivity extends AppCompatActivity implements OnTrimVideoLis
         });
     }
 
-    private void finishWithError(String report) {
+    private void finishWithError(String report, int report_code) {
         Intent intent = new Intent();
         intent.putExtra(Utils.REPORT, report);
+        intent.putExtra(Utils.REPORT_CODE, report_code);
         setResult(Activity.RESULT_CANCELED);
         finish();
     }

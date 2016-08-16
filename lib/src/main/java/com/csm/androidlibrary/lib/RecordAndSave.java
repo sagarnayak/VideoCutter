@@ -108,17 +108,17 @@ public class RecordAndSave extends Activity {
                     } else {
                         //close activity with error file path not valid or not accessable
                         Log.i("log", "the file path is not accessable or not valid.");
-                        finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "the file path is not accessable or not valid.");
+                        finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "the file path is not accessable or not valid.", Utils.REPORT_CODE_FILE_PATH_NOT_VALID);
                     }
                 } else {
                     //close activity with error no parameter passed
                     Log.i("log", "please pass a valid file path. do not leave the FILE_PATH empty.");
-                    finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "please pass a valid file path. do not leave the FILE_PATH empty.");
+                    finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "please pass a valid file path. do not leave the FILE_PATH empty.", Utils.REPORT_CODE_NO_FILE_PATH_FOUND);
                 }
                 break;
             default:
                 Log.i("log", "no operation selected.");
-                finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "please select a valid operation type");
+                finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "please select a valid operation type", Utils.REPORT_CODE_INVALID_OPERATION_TYPE);
         }
 
     }
@@ -156,7 +156,7 @@ public class RecordAndSave extends Activity {
             @Override
             public void onCancel(DialogInterface dialogInterface) {
                 Log.i("log", "dialog is cancelled");
-                finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "dialog is cancelled");
+                finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "dialog is cancelled", Utils.REPORT_CODE_DIALOG_CANCELLED);
             }
         });
 
@@ -262,7 +262,7 @@ public class RecordAndSave extends Activity {
                     startTrimActivity(selectedUri);
                 } else {
                     Log.i("log", "can not read the file after it is saved to the device memory.");
-                    finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "can not read the file after it is saved to device memory");
+                    finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "can not read the file after it is saved to device memory", Utils.REPORT_CODE_OUTPUT_FILE_CAN_NOT_BE_READ);
                 }
             } else if (requestCode == Utils.REQUEST_CODE_RECORD_TO_TRIM) {
                 //result from trim activity
@@ -274,12 +274,12 @@ public class RecordAndSave extends Activity {
                                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(data.getStringExtra(Utils.REPORT)));
                                 intent.setDataAndType(Uri.parse(data.getStringExtra(Utils.REPORT)), "video/mp4");
                                 startActivity(intent);
-                                finishActivityWithReport(Utils.REPORT__TYPE_DONE, data.getStringExtra(Utils.REPORT));
+                                finishActivityWithReport(Utils.REPORT__TYPE_DONE, data.getStringExtra(Utils.REPORT), Utils.REPORT_CODE_SUCCESS);
                             }
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                finishActivityWithReport(Utils.REPORT__TYPE_DONE, data.getStringExtra(Utils.REPORT));
+                                finishActivityWithReport(Utils.REPORT__TYPE_DONE, data.getStringExtra(Utils.REPORT), Utils.REPORT_CODE_SUCCESS);
                             }
                         })
                         .setIcon(android.R.drawable.ic_media_play)
@@ -298,14 +298,18 @@ public class RecordAndSave extends Activity {
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "the result is cancelled by android system due to inappropriate selection.");
+                                finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, "the result is cancelled by android system due to inappropriate selection.", Utils.REPORT_CODE_INAPPROPRIATE_SELECTION);
                             }
                         })
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .show();
             } else if (requestCode == Utils.REQUEST_CODE_RECORD_TO_TRIM) {
                 Log.i("log", "error in trimming video. error is : " + data.getStringExtra(Utils.REPORT));
-                finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, data.getStringExtra(Utils.REPORT));
+                if (data.getIntExtra(Utils.REPORT_CODE, 0) == Utils.REPORT_CODE_TRIMMING_CANCELLED) {
+                    finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, data.getStringExtra(Utils.REPORT), Utils.REPORT_CODE_TRIMMING_CANCELLED);
+                } else if (data.getIntExtra(Utils.REPORT_CODE, 0) == Utils.REPORT_CODE_ERROR_DURING_TRIMMING_VIDEO) {
+                    finishActivityWithReport(Utils.REPORT_TYPE_CANCELLED, data.getStringExtra(Utils.REPORT), Utils.REPORT_CODE_ERROR_DURING_TRIMMING_VIDEO);
+                }
             }
         }
     }
@@ -320,7 +324,7 @@ public class RecordAndSave extends Activity {
         startActivityForResult(intent, Utils.REQUEST_CODE_RECORD_TO_TRIM);
     }
 
-    private void finishActivityWithReport(int reporttype, String report) {
+    private void finishActivityWithReport(int reporttype, String report, int report_code) {
         Intent intent = new Intent();
         intent.putExtra(Utils.REPORT, report);
         if (reporttype == Utils.REPORT_TYPE_CANCELLED) {
@@ -342,7 +346,7 @@ public class RecordAndSave extends Activity {
             Log.i("log", "the max duration is et to : " + getIntent().getIntExtra(Utils.MAX_DURATION, 0));
             intMaxDuration = getIntent().getIntExtra(Utils.MAX_DURATION, 0);
         } else {
-            Log.i("log", "the max duration is default and the dafault will be 10 seconds. to vlaue was passed to it.");
+            Log.i("log", "the max duration is default and the dafault will be 10 seconds. to vlaue was not passed to it.");
         }
     }
 }

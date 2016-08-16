@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         ((Button) findViewById(R.id.button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivityForResult(new Intent(MainActivity.this, RecordAndSave.class).putExtra(Utils.operation_type, Utils.PERFORM_CHOOSE_FROM_GALLERY_OR_RECORD_VIDEO), Utils.REQUEST_CODE_PEFORM_VIDEO_TRIM);
+                startActivityForResult(new Intent(MainActivity.this, RecordAndSave.class)
+                                .putExtra(Utils.operation_type, Utils.PERFORM_CHOOSE_FROM_GALLERY_OR_RECORD_VIDEO)
+                        , Utils.REQUEST_CODE_PEFORM_VIDEO_TRIM);
             }
         });
 
